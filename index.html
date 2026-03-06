@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Video Hub</title>
+    <style>
+        /* প্রিমিয়াম ফন্ট */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #111;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* ক্লিন নেভিগেশন বার */
+        .header {
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #f0f0f0;
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #000;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* ড্রাইভের আইকন লুকানোর জন্য বিশেষ ভিডিও বক্স */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background: #000;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            overflow: hidden; 
+        }
+
+        /* আইফ্রেমকে একটু বড় করে পজিশন করা যাতে ড্রাইভের আইকনটা ফ্রেমের বাইরে চলে যায় */
+        .video-container iframe {
+            position: absolute;
+            top: -50px; 
+            left: 0;
+            width: 100%;
+            height: calc(100% + 90px); 
+            border: none;
+        }
+
+        /* ভিডিওর তথ্য */
+        .content-box {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .content-box h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .content-box p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* নিচের ভিডিও কার্ডস - একদম মিনিমাল */
+        .section-title {
+            margin-top: 60px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 100px;
+        }
+
+        .video-card {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none; /* লিঙ্ক দিলে আন্ডারলাইন রিমুভ করবে */
+            display: block;
+        }
+
+        .thumbnail {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #f4f4f4;
+            border-radius: 16px;
+            margin-bottom: 12px;
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-weight: 600;
+            overflow: hidden;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-card:hover .thumbnail {
+            transform: scale(1.02);
+            background: #eee;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+            color: #222;
+        }
+
+        .card-info {
+            font-size: 13px;
+            color: #888;
+            margin-top: 4px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">Stream<span style="color:#007AFF">Pro</span></a>
+        <div style="font-size: 14px; font-weight: 500; color: #555;">Browse • My Studio</div>
+    </header>
+
+    <div class="container">
+        
+        <div class="video-container">
+            <iframe src="https://drive.google.com/file/d/1WGxHpIkvlXS-5OZZ7mlLUdyMjHi17_MX/preview" allow="autoplay" allowfullscreen></iframe>
+        </div>
+
+        <div class="content-box">
+            <h1>প্রোফেশনাল ভিডিও</h1>
+
+        <h2 class="section-title">পরবর্তী ভিডিওগুলো</h2>
+        <div class="video-container">
+            <iframe src="https://drive.google.com/file/d/1wCXujoEfzC00Lo6MWj4nprGbaMOnyok6/preview" allow="autoplay" allowfullscreen></iframe>
+        </div>
+
+        <div class="content-box">
+            <h1>প্রোফেশনাল ভিডিও</h1>
+
+        <div class="video-container">
+            <iframe src="https://drive.google.com/file/d/1EVmNP_zgxP7QOcQDZF5Yeufmlb8d9RN4/preview" allow="autoplay" allowfullscreen></iframe>
+        </div>
+
+        <div class="content-box">
+            <h1>প্রোফেশনাল ভিডিও</h1>
+            
+            <div class="video-container">
+            <iframe src="https://drive.google.com/file/d/1NW56o5W6IbgZVakSTxUTg1lFau4KQOSw/preview" allow="autoplay" allowfullscreen></iframe>
+        </div>
+
+        <div class="content-box">
+            <h1>প্রোফেশনাল ভিডিও</h1>
+        <div class="video-container">
+            <iframe src="https://drive.google.com/file/d/1NP6aeEWqffOtoRhIOoqQj7GSuw-_OZ8c/preview" allow="autoplay" allowfullscreen></iframe>
+        </div>
+
+        <div class="content-box">
+            <h1>প্রোফেশনাল ভিডিও</h1>
+            
+          <div class="video-container">
+            <iframe src="https://drive.google.com/file/d/1gODU-oQwzuUdvyf53U2X0L1VN4YbcSjQ/preview" allow="autoplay" allowfullscreen></iframe>
+        </div>
+
+        <div class="content-box">
+            <h1>প্রোফেশনাল ভিডিও</h1>
+            
+            <div class="video-container">
+            <iframe src="https://drive.google.com/file/d/10tl6lOJEbIu77Q9xD2E0BzPkYAuijNZd/preview" allow="autoplay" allowfullscreen></iframe>
+        </div>
+
+        <div class="content-box">
+            <h1>প্রোফেশনাল ভিডিও</h1>
+            
+            <div class="video-container">
+            <iframe src="https://drive.google.com/file/d/1cL7lDNhCmz8X_h25qtSSq2QCj1ilwR__/preview" allow="autoplay" allowfullscreen></iframe>
+        </div>
+
+        <div class="content-box">
+            <h1>প্রোফেশনাল ভিডিও</h1>
+            
+            <div class="video-container">
+            <iframe src="https://drive.google.com/file/d/10eElpavCUtd6GYHTG6uW628kAAAPRZeK/preview" allow="autoplay" allowfullscreen></iframe>
+        </div>
+
+        <div class="content-box">
+            <h1>প্রোফেশনাল ভিডিও</h1>
+            
+            <div class="video-container">
+            <iframe src="https://drive.google.com/file/d/1S3K6ZGdweWEMaH0NjsJWuBareru0lmke/preview" allow="autoplay" allowfullscreen></iframe>
+        </div>
+
+        <div class="content-box">
+            <h1>প্রোফেশনাল ভিডিও</h1>
+        
+        </div>
+    </div>
+
+</body>
+</html>
